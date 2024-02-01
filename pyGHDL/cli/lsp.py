@@ -68,6 +68,7 @@ def __rotate_log_files(basename: str, num: int):
     # Note: Path.with_suffix cannot be used as there might be multiple
     # suffixes (like in trace.out.0).
     oldfile = Path(f"{basename}.{num}")
+    print('hola')
     if oldfile.is_file():
         oldfile.unlink()
     # Rotate old files
